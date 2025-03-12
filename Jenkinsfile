@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Starting Build Stage'
-                sh 'g++ main/hello.cpp -o hello'  // Updated path to hello.cpp
                 echo 'Build Stage Successful'
             }
         }
@@ -13,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running Tests'
-                sh './hello'
+                sh './hello'  
                 echo 'Test Stage Successful'
             }
             post {
